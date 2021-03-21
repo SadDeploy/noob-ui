@@ -11,9 +11,14 @@
   &:after {
     box-sizing: border-box;
   }
-  
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+section, article, aside, footer, header, nav, hgroup, main {
+  display:block;
 }
 
 //
