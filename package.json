@@ -72,7 +72,7 @@
     "rellax": "^1.12.1",
     "scrollmagic": "^2.0.7",
     "select2": "^4.0.13",
-    "swiper": "^6.0.1",
+    "swiper": "^6.5.1",
     "velocity-animate": "^1.5.2"
   }
 }
