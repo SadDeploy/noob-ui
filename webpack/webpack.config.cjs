@@ -10,7 +10,7 @@ const webpack = require("webpack");
 const WebpackNotifierPlugin = require("webpack-notifier");
 const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
 const glob = require("glob");
-const PurgeCssPlugin = require("purgecss-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const PATHS = {
 	src: path.join(__dirname, '../src')
 };
@@ -145,9 +145,44 @@ module.exports = (env, argv) => {
         optimization: {
             minimizer: [
                 new TerserPlugin({
-                    cache: true,
                     parallel: true,
-                    sourceMap: true,
+                }),
+                new ImageMinimizerPlugin({
+                    minimizer: {
+                        implementation: ImageMinimizerPlugin.imageminMinify,
+                        options: {
+                            // Lossless optimization with custom option
+                            // Feel free to experiment with options for better result for you
+                            plugins: [
+                                ["gifsicle", { interlaced: true }],
+                                ["jpegtran", { progressive: true }],
+                                ["optipng", { optimizationLevel: 5 }],
+                                // Svgo configuration here https://github.com/svg/svgo#configuration
+                                [
+                                    "svgo",
+                                    {
+                                        plugins: [
+                                            {
+                                                name: "preset-default",
+                                                params: {
+                                                    overrides: {
+                                                        removeViewBox: false,
+                                                        addAttributesToSVGElement: {
+                                                            params: {
+                                                                attributes: [
+                                                                    { xmlns: "http://www.w3.org/2000/svg" },
+                                                                ],
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        ],
+                                    },
+                                ],
+                            ],
+                        },
+                    },
                 }),
             ],
             splitChunks: {

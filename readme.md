@@ -1,6 +1,6 @@
 # Noob-ui
 
-> It's front-end template using babel/pug/scss/webpack
+> It's a front-end template using babel/pug/scss/webpack
 
 ## How to install
 
