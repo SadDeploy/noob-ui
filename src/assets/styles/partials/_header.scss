@@ -7,35 +7,44 @@
 // Header
 //
 .page-header {
-  border-bottom: 1px solid $gray-darken-1;
-  &__logo {
-    a {text-decoration: none;}
-    img {
-      vertical-align: middle;
-      max-width: 60px;
+    border-bottom: 1px solid $gray-darken-1;
+
+    &__logo {
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            vertical-align: middle;
+            max-width: 60px;
+        }
+
+        span {
+            vertical-align: middle;
+            margin-left: 10px;
+        }
     }
-    span {
-      vertical-align: middle;
-      margin-left: 10px;
+
+    > .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-  }
-  > .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
 
 //
 // Main title
 //
-.title { }
+.title {
+}
 
 
 //
 // old-browser
 //
 .browsehappy {
-  @extend .container;
+    @extend .container;
 }
-.lt-ie8 { }
+
+.lt-ie8 {
+}

@@ -4,126 +4,195 @@
 
 
 table {
-  background-color: $table-bg;
+    background-color: $table-bg;
 }
+
 caption {
-  padding-top: $table-cell-padding;
-  padding-bottom: $table-cell-padding;
-  text-align: left;
+    padding-top: $table-cell-padding;
+    padding-bottom: $table-cell-padding;
+    text-align: left;
 }
+
 th {
-  text-align: left;
+    text-align: left;
 }
 
 
 @if $use-table == true {
-  // Baseline styles
-  .table {
-    width: 100%;
-    margin-bottom: $line-height-computed;
-
-    img {vertical-align: middle;}
-    th,
-    td {
-      padding: $table-cell-padding;
-      line-height: $base-line-height;
-      vertical-align: top;
-      border: 1px solid $table-border-color;
-    }
-    > thead th {
-      vertical-align: middle;
-      text-align: center;
-      font-weight: 500;
-      border: 1px solid $table-border-color;
-      background-color: #eceff4;
-    }
-    > tbody + tbody {
-      border-top: 2px solid $table-border-color;
-    }
+    // Baseline styles
     .table {
-      background-color: $base-background;
+        width: 100%;
+        margin-bottom: $line-height-computed;
+
+        img {
+            vertical-align: middle;
+        }
+
+        th,
+        td {
+            padding: $table-cell-padding;
+            line-height: $base-line-height;
+            vertical-align: top;
+            border: 1px solid $table-border-color;
+        }
+
+        > thead th {
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 500;
+            border: 1px solid $table-border-color;
+            background-color: #eceff4;
+        }
+
+        > tbody + tbody {
+            border-top: 2px solid $table-border-color;
+        }
+
+        .table {
+            background-color: $base-background;
+        }
+
+        // Condensed table w/ half padding
+        &--condensed {
+            th,
+            td {
+                padding: $table-condensed-cell-padding;
+            }
+        }
+
+        // Bordered version
+        &--bordered {
+            border: 1px solid $table-border-color;
+
+            th,
+            td {
+                border: 1px solid $table-border-color;
+            }
+
+            > thead td {
+                border-bottom-width: 2px;
+            }
+        }
+
+        // Zebra-striping
+        &--striped {
+            > tbody > tr:nth-of-type(odd) {
+                background-color: $table-bg-accent;
+            }
+        }
+
+        // Hover effect
+        &--hover {
+            > tbody > tr:hover {
+                background-color: $table-bg-hover;
+            }
+        }
+
+        // Responsive effect
+        &--responsive {
+            min-height: .01%;
+            overflow-x: auto;
+        }
     }
 
-    // Condensed table w/ half padding
-    &--condensed {
-      th,
-      td {
-        padding: $table-condensed-cell-padding;
-      }
-    }
+    @if $use-column-table == true {
+        .t5 {
+            width: 5%
+        }
+        .t10 {
+            width: 10%
+        }
+        .t12 {
+            width: 12.5%
+        }
+        /* 1/8 */
+        .t15 {
+            width: 15%
+        }
+        .t20 {
+            width: 20%
+        }
+        .t25 {
+            width: 25%
+        }
+        /* 1/4 */
+        .t30 {
+            width: 30%
+        }
+        .t33 {
+            width: 33.333%
+        }
+        /* 1/3 */
+        .t35 {
+            width: 35%
+        }
+        .t37 {
+            width: 37.5%
+        }
+        /* 3/8 */
+        .t40 {
+            width: 40%
+        }
+        .t45 {
+            width: 45%
+        }
+        .t50 {
+            width: 50%
+        }
+        /* 1/2 */
+        .t55 {
+            width: 55%
+        }
+        .t60 {
+            width: 60%
+        }
+        .t62 {
+            width: 62.5%
+        }
+        /* 5/8 */
+        .t65 {
+            width: 65%
+        }
+        .t66 {
+            width: 66.666%
+        }
+        /* 2/3 */
+        .t70 {
+            width: 70%
+        }
+        .t75 {
+            width: 75%
+        }
+        /* 3/4*/
+        .t80 {
+            width: 80%
+        }
+        .t85 {
+            width: 85%
+        }
+        .t87 {
+            width: 87.5%
+        }
+        /* 7/8 */
+        .t90 {
+            width: 90%
+        }
+        .t95 {
+            width: 95%
+        }
 
-    // Bordered version
-    &--bordered {
-      border: 1px solid $table-border-color;
-      th,
-      td {
-        border: 1px solid $table-border-color;
-      }
-      > thead td {
-        border-bottom-width: 2px;
-      }
-    }
+        // Cell alignments
+        .numerical {
+            text-align: right;
+        }
 
-    // Zebra-striping
-    &--striped {
-      > tbody > tr:nth-of-type(odd) {
-        background-color: $table-bg-accent;
-      }
+        // Table backgrounds
+        @if $use-color-table == true {
+            @include table-row-variant('active', $table-bg-active);
+            @include table-row-variant('success', $state-success-bg);
+            @include table-row-variant('info', $state-info-bg);
+            @include table-row-variant('warning', $state-warning-bg);
+            @include table-row-variant('danger', $state-danger-bg);
+        }
     }
-
-    // Hover effect
-    &--hover {
-      > tbody > tr:hover {
-        background-color: $table-bg-hover;
-      }
-    }
-
-    // Responsive effect
-    &--responsive {
-      min-height: .01%;
-      overflow-x: auto;
-    }
-  }
-
-  @if $use-column-table == true {
-    .t5  { width: 5% }
-    .t10 { width:10% }
-    .t12 { width:12.5% }     /* 1/8 */
-    .t15 { width:15% }
-    .t20 { width:20% }
-    .t25 { width:25% }       /* 1/4 */
-    .t30 { width:30% }
-    .t33 { width:33.333% }   /* 1/3 */
-    .t35 { width:35% }
-    .t37 { width:37.5% }     /* 3/8 */
-    .t40 { width:40% }
-    .t45 { width:45% }
-    .t50 { width:50% }       /* 1/2 */
-    .t55 { width:55% }
-    .t60 { width:60% }
-    .t62 { width:62.5% }     /* 5/8 */
-    .t65 { width:65% }
-    .t66 { width:66.666% }   /* 2/3 */
-    .t70 { width:70% }
-    .t75 { width:75% }       /* 3/4*/
-    .t80 { width:80% }
-    .t85 { width:85% }
-    .t87 { width:87.5% }     /* 7/8 */
-    .t90 { width:90% }
-    .t95 { width:95% }
-
-    // Cell alignments
-    .numerical {
-      text-align: right;
-    }
-
-    // Table backgrounds
-    @if $use-color-table == true {
-      @include table-row-variant('active', $table-bg-active);
-      @include table-row-variant('success', $state-success-bg);
-      @include table-row-variant('info', $state-info-bg);
-      @include table-row-variant('warning', $state-warning-bg);
-      @include table-row-variant('danger', $state-danger-bg);
-    }
-  }
 }

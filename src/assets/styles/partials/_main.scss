@@ -3,29 +3,31 @@
 // ------------------------------------
 
 @if $use-adaptive == false {
-  header, main, footer {
-    min-width: $container-xl;
-  }
+    header, main, footer {
+        min-width: $container-xl;
+    }
 }
 
 //
 // Main container
 //
 .main {
-  min-height: calc(100vh - 128px); // min-height depends on header && footer
-  .container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
+    min-height: calc(100vh - 128px); // min-height depends on header && footer
+    .container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 
 //tempaltes
 .text-template {
-  padding: 20px 0;
+    padding: 20px 0;
 }
+
 .dark-template {
-  padding: 20px 0;
-  background-color: $base-color-darken;
+    padding: 20px 0;
+    background-color: $base-color-darken;
 }
+
 //tempaltes

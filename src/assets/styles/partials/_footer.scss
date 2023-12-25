@@ -7,8 +7,10 @@
 // Footer
 //
 .page-footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: 1px solid $gray-darken-1;
-  &__copyrights { }
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid $gray-darken-1;
+
+    &__copyrights {
+    }
 }

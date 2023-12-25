@@ -3,51 +3,54 @@
 // --------------------------------------------------
 
 @if $use-pager == true {
-  .pager {
-    padding: 0;
-    margin: $line-height-computed 0;
-    list-style: none;
-    text-align: center;
-    font-size: 15px;
-    @include clearfix;
-    &__item {
-      display: inline-block;
-    }
+    .pager {
+        padding: 0;
+        margin: $line-height-computed 0;
+        list-style: none;
+        text-align: center;
+        font-size: 15px;
+        @include clearfix;
 
-    &__link,
-    span {
-      display: inline-block;
-      text-decoration: none;
-      padding: 5px 14px;
-      height: 40px;
-      line-height: 28px;
-      &.arr {
-        width: 40px;
-        background-color: $pager-bg;
-        border: 1px solid $pager-border;
-        border-radius: $pager-border-radius;
-      }
-      &:hover,
-      &:focus {
-        text-decoration: none;
-        color: $pager-hover-color;
-        background-color: $pager-hover-bg;
-        border-color: $pager-hover-bg;
-      }
-    }
+        &__item {
+            display: inline-block;
+        }
 
-    .next {
-      a,
-      span {
-        float: right;
-      }
-    }
+        &__link,
+        span {
+            display: inline-block;
+            text-decoration: none;
+            padding: 5px 14px;
+            height: 40px;
+            line-height: 28px;
 
-    .previous {
-      a,
-      span {
-        float: left;
-      }
+            &.arr {
+                width: 40px;
+                background-color: $pager-bg;
+                border: 1px solid $pager-border;
+                border-radius: $pager-border-radius;
+            }
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $pager-hover-color;
+                background-color: $pager-hover-bg;
+                border-color: $pager-hover-bg;
+            }
+        }
+
+        .next {
+            a,
+            span {
+                float: right;
+            }
+        }
+
+        .previous {
+            a,
+            span {
+                float: left;
+            }
+        }
     }
-  }
 }

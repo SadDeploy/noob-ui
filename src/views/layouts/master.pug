@@ -1,6 +1,6 @@
 //- Custom Configuration
 block config
-  - var adaptive = true // choose website type
+    - var adaptive = true // choose website type
 
 //- Master layout
 
@@ -8,81 +8,81 @@ include ../mixins/_mixins.pug
 
 doctype html
 html(lang='en')
-  head
-    meta(charset="UTF-8")
+    head
+        meta(charset="UTF-8")
 
-    block title
-      title Case__fly
-    <!--[if IE]>
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    <![endif]-->
-    if adaptive === true
-      meta(name="viewport", content="width=device-width, initial-scale=1")
+        block title
+            title Case__fly
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        <![endif]-->
+        if adaptive === true
+            meta(name="viewport", content="width=device-width, initial-scale=1")
 
-    link(rel="canonical" href="URL")
-    meta(name="format-detection", content="telephone=no")
-    meta(name="format-detection", content="address=no")
+        link(rel="canonical" href="URL")
+        meta(name="format-detection", content="telephone=no")
+        meta(name="format-detection", content="address=no")
 
-    //- Basic Seo
+        //- Basic Seo
 
-    block basicSeo
-      meta(name='description' content='Index page')
-      meta(name='keywords', content='index, page')
-      meta(name='author' content='')
+        block basicSeo
+            meta(name='description' content='Index page')
+            meta(name='keywords', content='index, page')
+            meta(name='author' content='')
 
-    //- Twitter
-    meta(name='twitter:card', content='summary')
-    meta(name='twitter:site', content='')
-    meta(name='twitter:image', content='')
-    meta(name='twitter:description', content='')
+        //- Twitter
+        meta(name='twitter:card', content='summary')
+        meta(name='twitter:site', content='')
+        meta(name='twitter:image', content='')
+        meta(name='twitter:description', content='')
 
-    //- Facebook
-    meta(property='og:url', content='')
-    meta(property='og:title', content='')
-    meta(property='og:description', content='')
-    meta(property='og:image', content='')
-    meta(property='og:type', content='website')
+        //- Facebook
+        meta(property='og:url', content='')
+        meta(property='og:title', content='')
+        meta(property='og:description', content='')
+        meta(property='og:image', content='')
+        meta(property='og:type', content='website')
 
-    // iOS
-    meta(name="apple-mobile-web-app-capable", content="yes")
-    meta(name="apple-mobile-web-app-status-bar-style", content="black")
-    meta(name="apple-mobile-web-app-title", content="Case__fy")
-    link(rel="apple-touch-icon", href="images/favicons/apple-touch-icon.png")
+        // iOS
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="apple-mobile-web-app-title", content="Case__fy")
+        link(rel="apple-touch-icon", href="images/favicons/apple-touch-icon.png")
 
-    // Android
-    meta(name="mobile-web-app-capable", content="yes")
-    meta(name="theme-color", content="#f8aa27")
-    link(rel="icon" type="image/png" href="images/favicons/android-chrome-192x192.png" sizes="192x192")
+        // Android
+        meta(name="mobile-web-app-capable", content="yes")
+        meta(name="theme-color", content="#f8aa27")
+        link(rel="icon" type="image/png" href="images/favicons/android-chrome-192x192.png" sizes="192x192")
 
-    // Windows
-    meta(name="msapplication-TileImage", content="images/favicons/mstile-144x144.png")
-    meta(name="msapplication-TileColor", content="#f8aa27")
+        // Windows
+        meta(name="msapplication-TileImage", content="images/favicons/mstile-144x144.png")
+        meta(name="msapplication-TileColor", content="#f8aa27")
 
-    //- Preload fonts
-    //link(type='font/woff', href=require('font'), rel='preload', as='font', crossorigin)
+        //- Preload fonts
+        //link(type='font/woff', href=require('font'), rel='preload', as='font', crossorigin)
 
-    link(rel="shortcut icon", href="assets/favicon.ico")
+        link(rel="shortcut icon", href="assets/favicon.ico")
 
-    block pageName
-      - var pageName = "main"
+        block pageName
+            - var pageName = "main"
 
-  body(class="page-" + pageName)
-    <!--[if lt IE 9]>
-    p.browsehappy
-      | Данный сайт построен на передовых, современных технологиях и не поддерживает Ваш браузер. Настоятельно рекомендуем выбрать и установить любой из &nbsp;
-      a(href="http://browsehappy.com/", target="_blank") современных браузеров.
-      |  Это бесплатно и займет всего несколько минут.
-    <![endif]-->
+    body(class="page-" + pageName)
+        <!--[if lt IE 9]>
+        p.browsehappy
+            | Данный сайт построен на передовых, современных технологиях и не поддерживает Ваш браузер. Настоятельно рекомендуем выбрать и установить любой из &nbsp;
+            a(href="http://browsehappy.com/", target="_blank") современных браузеров.
+            |  Это бесплатно и займет всего несколько минут.
+        <![endif]-->
 
-    //- Header
-    block header
+        //- Header
+        block header
 
-    //- block content
-    main.main
-      block content
+        //- block content
+        main.main
+            block content
 
-    //- Footer
-    block footer
+        //- Footer
+        block footer
 
-    //- block scripts
-    block scripts
+        //- block scripts
+        block scripts

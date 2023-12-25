@@ -3,31 +3,31 @@
 // --------------------------------------------------
 
 @if $use-space == true {
-  //
-  // padding
-  //
-  $a: 0;
-  @while $a < 101 {
-    .padtop#{$a} {
-      @include padtop(1px * $a);
+    //
+    // padding
+    //
+    $a: 0;
+    @while $a < 101 {
+        .padtop#{$a} {
+            @include padtop(1px * $a);
+        }
+        .padbot#{$a} {
+            @include padbot(1px * $a);
+        }
+        $a: $a + 10;
     }
-    .padbot#{$a} {
-      @include padbot(1px * $a);
-    }
-    $a: $a + 10;
-  }
 
-  //
-  // margin
-  //
-  $b: 0;
-  @while $b < 101 {
-    .margbot#{$b} {
-      @include margbot(1px * $b);
+    //
+    // margin
+    //
+    $b: 0;
+    @while $b < 101 {
+        .margbot#{$b} {
+            @include margbot(1px * $b);
+        }
+        .margtop#{$b} {
+            @include margtop(1px * $b);
+        }
+        $b: $b + 10;
     }
-    .margtop#{$b} {
-      @include margtop(1px * $b);
-    }
-    $b: $b + 10;
-  }
 }

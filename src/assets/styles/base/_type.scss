@@ -5,235 +5,322 @@
 
 // Headings
 h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
-  color: $headings-color;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
 
-  text-transform: uppercase;
+    text-transform: uppercase;
 
-  small {
-    font-weight: normal;
-    line-height: 1;
-  }
+    small {
+        font-weight: normal;
+        line-height: 1;
+    }
 }
 
 h1,
 h2,
 h3 {
-  margin-top: $line-height-computed;
-  margin-bottom: $line-height-computed-half;
+    margin-top: $line-height-computed;
+    margin-bottom: $line-height-computed-half;
 
-  small {
-    font-size: 65%;
-  }
+    small {
+        font-size: 65%;
+    }
 }
+
 h4,
 h5,
 h6 {
-  margin-top: $line-height-computed;
-  margin-bottom: $line-height-computed-half;
+    margin-top: $line-height-computed;
+    margin-bottom: $line-height-computed-half;
 
-  small {
-    font-size: 75%;
-  }
+    small {
+        font-size: 75%;
+    }
 }
 
-h1, .alpha   { font-size: $font-size-h1; }
-h2, .beta    { font-size: $font-size-h2; }
-h3, .gamma   { font-size: $font-size-h3; }
-h4, .delta   { font-size: $font-size-h4; }
-h5, .epsilon { font-size: $font-size-h5; }
-h6, .zeta    { font-size: $font-size-h6; }
+h1, .alpha {
+    font-size: $font-size-h1;
+}
+
+h2, .beta {
+    font-size: $font-size-h2;
+}
+
+h3, .gamma {
+    font-size: $font-size-h3;
+}
+
+h4, .delta {
+    font-size: $font-size-h4;
+}
+
+h5, .epsilon {
+    font-size: $font-size-h5;
+}
+
+h6, .zeta {
+    font-size: $font-size-h6;
+}
 
 
 // Body text
-p { margin: 0 0 $line-height-computed-half; }
+p {
+    margin: 0 0 $line-height-computed-half;
+}
 
-b { font-weight: 400; }
+b {
+    font-weight: 400;
+}
 
 // Alignment
-.text--left           { text-align: left; }
-.text--right          { text-align: right; }
-.text--center         { text-align: center; }
-.text--justify        { text-align: justify; }
-.text--nowrap         { white-space: nowrap; }
+.text--left {
+    text-align: left;
+}
+
+.text--right {
+    text-align: right;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.text--justify {
+    text-align: justify;
+}
+
+.text--nowrap {
+    white-space: nowrap;
+}
 
 
 // Responsive alignment
 @if $use-adaptive == true {
-  @media screen and (min-width: $screen-sm-min) {
-    .text__sm--left   { text-align: left; }
-    .text__sm--right  { text-align: right; }
-    .text__sm--center { text-align: center; }
-  }
-  @media screen and (min-width: $screen-md-min) {
-    .text__md--left { text-align: left;}
-    .text__md--right {text-align: right;}
-    .text__md--center {text-align: center;}
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        .text__sm--left {
+            text-align: left;
+        }
+        .text__sm--right {
+            text-align: right;
+        }
+        .text__sm--center {
+            text-align: center;
+        }
+    }
+    @media screen and (min-width: $screen-md-min) {
+        .text__md--left {
+            text-align: left;
+        }
+        .text__md--right {
+            text-align: right;
+        }
+        .text__md--center {
+            text-align: center;
+        }
+    }
 
-  @media screen and (min-width: $screen-lg-min) {
-    .text__lg--left { text-align: left;}
-    .text__lg--right { text-align: right;}
-    .text__lg--center { text-align: center;}
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        .text__lg--left {
+            text-align: left;
+        }
+        .text__lg--right {
+            text-align: right;
+        }
+        .text__lg--center {
+            text-align: center;
+        }
+    }
 
-  @media screen and (min-width: $screen-xl-min) {
-    .text__xl--left { text-align: left;}
-    .text__xl--right { text-align: right;}
-    .text__xl--center { text-align: center;}
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        .text__xl--left {
+            text-align: left;
+        }
+        .text__xl--right {
+            text-align: right;
+        }
+        .text__xl--center {
+            text-align: center;
+        }
+    }
 }
 
 
 // Transformation
-.text--lowercase      { text-transform: lowercase; }
-.text--uppercase      { text-transform: uppercase; }
-.text--capitalize     { text-transform: capitalize; }
+.text--lowercase {
+    text-transform: lowercase;
+}
+
+.text--uppercase {
+    text-transform: uppercase;
+}
+
+.text--capitalize {
+    text-transform: capitalize;
+}
 
 
 // Text size
-.text__sm { font-size: $font-size-small; }
-.text__md { font-size: $font-size-medium; }
-.text__lg { font-size: $font-size-large; }
+.text__sm {
+    font-size: $font-size-small;
+}
+
+.text__md {
+    font-size: $font-size-medium;
+}
+
+.text__lg {
+    font-size: $font-size-large;
+}
 
 
 @if $use-color-text == true {
-  // Color text
-  @include text-emphasis-variant('.text--primary', $base-color-main);
-  @include text-emphasis-variant('.text--success', $color-type-4a);
-  @include text-emphasis-variant('.text--info', $color-type-1a);
-  @include text-emphasis-variant('.text--warning', $color-type-3a);
-  @include text-emphasis-variant('.text--danger', $color-type-2a);
+    // Color text
+    @include text-emphasis-variant('.text--primary', $base-color-main);
+    @include text-emphasis-variant('.text--success', $color-type-4a);
+    @include text-emphasis-variant('.text--info', $color-type-1a);
+    @include text-emphasis-variant('.text--warning', $color-type-3a);
+    @include text-emphasis-variant('.text--danger', $color-type-2a);
 }
 
 
 // Lists
 ul,
 ol {
-  margin-top: 0;
-  margin-bottom: $line-height-computed-half;
-  ul,
-  ol {
-    margin-bottom: 0;
-  }
+    margin-top: 0;
+    margin-bottom: $line-height-computed-half;
+
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
 }
 
 .list {
-  &--unstyled {
-    @include list--unstyled;
-  }
-
-  &--inline {
-    @include list--unstyled;
-    margin-left: -5px;
-    > li {
-      display: inline-block;
-      padding-left: 5px;
-      padding-right: 5px;
+    &--unstyled {
+        @include list--unstyled;
     }
-  }
 
-  &--counter {
-    //max-width: 610px;
-    @include list--unstyled;
-    li {
-      display: block;
-      position: relative;
-      overflow: hidden;
-      &:after {
-        content:'';
-        display: block;
-        position: absolute;
-        bottom: 4px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        border-top: 1px dotted #666;
-      }
-      .key {
-        display: inline-block;
-        position: relative;
-        z-index: 2;
-        background: #fff;
-        padding-right: 5px;
-      }
-      .value {
-        display: block;
-        float: right;
-        bottom: 0;
-        right: 0;
-        z-index: 2;
-        background: #fff;
-        padding-left: 5px;
-      }
-    }
-  }
+    &--inline {
+        @include list--unstyled;
+        margin-left: -5px;
 
-  &--bullet {
-    @include list--unstyled;
-    margin-left: 11px;
-    > li {
-      margin-bottom: $line-height-computed / 2.6;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &::before {
-        content: '•';
-        color: #04be5b;
-        font-size: 20px;
-        margin-right: 11px;
-      }
+        > li {
+            display: inline-block;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
     }
-  }
 
-  &--number {
-    counter-reset: items;
-    padding-left: 0;
-    margin-left: 11px;
-    > li {
-      margin-bottom: $line-height-computed / 2.6;
-      &::before {
-        counter-increment: items 1;
-        content: counter(items, decimal) ".";
-        margin-right: 5px;
-        font-weight: 400;
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
+    &--counter {
+        //max-width: 610px;
+        @include list--unstyled;
+
+        li {
+            display: block;
+            position: relative;
+            overflow: hidden;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 4px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                border-top: 1px dotted #666;
+            }
+
+            .key {
+                display: inline-block;
+                position: relative;
+                z-index: 2;
+                background: #fff;
+                padding-right: 5px;
+            }
+
+            .value {
+                display: block;
+                float: right;
+                bottom: 0;
+                right: 0;
+                z-index: 2;
+                background: #fff;
+                padding-left: 5px;
+            }
+        }
     }
-  }
+
+    &--bullet {
+        @include list--unstyled;
+        margin-left: 11px;
+
+        > li {
+            margin-bottom: calc($line-height-computed / 2.6);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &::before {
+                content: '•';
+                color: #04be5b;
+                font-size: 20px;
+                margin-right: 11px;
+            }
+        }
+    }
+
+    &--number {
+        counter-reset: items;
+        padding-left: 0;
+        margin-left: 11px;
+
+        > li {
+            margin-bottom: calc($line-height-computed / 2.6);
+
+            &::before {
+                counter-increment: items 1;
+                content: counter(items, decimal) ".";
+                margin-right: 5px;
+                font-weight: 400;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
-
 
 
 // Blockquotes
 blockquote {
-  padding: 0 $line-height-computed 0 ($line-height-computed * 1.8);
-  margin: $line-height-computed * 2 0;
-  font-size: $blockquote-font-size;
-  line-height: 1.6;
-  position: relative;
+    padding: 0 $line-height-computed 0 ($line-height-computed * 1.8);
+    margin: $line-height-computed * 2 0;
+    font-size: $blockquote-font-size;
+    line-height: 1.6;
+    position: relative;
 
-  &:before {
-    content: '';
-    height: 100%;
-    width: 3px;
-    @include background-gradient(#a234d5, #0082d5);
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-  }
-  p,
-  ul,
-
-  ol {
-    &:last-child {
-      margin-bottom: 0;
+    &:before {
+        content: '';
+        height: 100%;
+        width: 3px;
+        @include background-gradient(#a234d5, #0082d5);
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
     }
-  }
+
+    p,
+    ul,
+    ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

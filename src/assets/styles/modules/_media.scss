@@ -2,39 +2,47 @@
 // Modules -> Media
 // --------------------------------------------------
 @if $use-media == true {
-  .media {
-    display: block;
-    margin: 20px 0;
-    @extend .clearfix;
-    &__body {
-      overflow: hidden;
-      font-size: 15px;
-      h6 {
-        margin: 0 0 10px;
-        font-size: 17px;
-      }
-      p {margin: 0;}
-    }
-    &__img {
-      float: left;
-      margin-right: $line-height-computed;
-      &--rev {
-        float: right;
-        margin-left: $line-height-computed;
-      }
-    }
-    &__title {
-      font-size: 17px;
-    }
-  }
+    .media {
+        display: block;
+        margin: 20px 0;
+        @extend .clearfix;
 
-  .media__img img,
-  .media__img--rev img {
-    display: block;
-  }
+        &__body {
+            overflow: hidden;
+            font-size: 15px;
 
-  .media__body,
-  .media__body > :last-child {
-    margin-bottom: 0;
-  }
+            h6 {
+                margin: 0 0 10px;
+                font-size: 17px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        &__img {
+            float: left;
+            margin-right: $line-height-computed;
+
+            &--rev {
+                float: right;
+                margin-left: $line-height-computed;
+            }
+        }
+
+        &__title {
+            font-size: 17px;
+        }
+    }
+
+    .media__img img,
+    .media__img--rev img {
+        display: block;
+    }
+
+    .media__body,
+    .media__body > :last-child {
+        margin-bottom: 0;
+    }
 }

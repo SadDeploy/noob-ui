@@ -6,69 +6,55 @@
 // close btn
 //
 .close {
-  float: right;
-  font-size: ($base-font-size * 1.1764);
-  font-weight: $close-font-weight;
-  line-height: 1;
-  color: $close-color;
-  @include opacity(1);
-
-  &:hover,
-  &:focus {
+    float: right;
+    font-size: ($base-font-size * 1.1764);
+    font-weight: $close-font-weight;
+    line-height: 1;
     color: $close-color;
-    text-decoration: none;
-    cursor: pointer;
-    @include opacity(.5);
-  }
+    @include opacity(1);
+
+    &:hover,
+    &:focus {
+        color: $close-color;
+        text-decoration: none;
+        cursor: pointer;
+        @include opacity(.5);
+    }
 }
+
 button.close {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
 }
 
 /* purgecss start ignore */
 .centered-block {
-  @include center-block;
+    @include center-block;
 }
-.pulled-right {
-  float: right;
-}
-.pulled-left {
-  float: left;
-}
-/* purgecss end ignore */
 
-@if $use-adaptive == true and $use-flexbox == false {
-  @media screen and (min-width: $screen-sm-min) {
-    .pulled__sm-left   { float: left; }
-    .pulled__sm-right  { float: right; }
-  }
-  @media screen and (min-width: $screen-md-min) {
-    .pulled__md-left   { float: left; }
-    .pulled__md-right  { float: right; }
-  }
-  @media screen and (min-width: $screen-lg-min) {
-    .pulled__lg-left   { float: left; }
-    .pulled__lg-right  { float: right; }
-  }
-  @media screen and (min-width: $screen-xl-min) {
-    .pulled__xl-left   { float: left; }
-    .pulled__xl-right  { float: right; }
-  }
+.pulled-right {
+    float: right;
+}
+
+.pulled-left {
+    float: left;
 }
 
 .hide {
-  display: none;
+    display: none;
 }
+
 .show {
-  display: block;
+    display: block;
 }
+
 .invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
+
 .text-hide {
-  @include text-hide;
+    @include text-hide;
 }

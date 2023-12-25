@@ -7,39 +7,46 @@
 // border-radius
 //
 @mixin border-top-radius($radius) {
-  border-top-right-radius: $radius;
-   border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
 }
+
 @mixin border-right-radius($radius) {
-  border-bottom-right-radius: $radius;
-     border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    border-top-right-radius: $radius;
 }
+
 @mixin border-bottom-radius($radius) {
-  border-bottom-right-radius: $radius;
-   border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
 }
+
 @mixin border-left-radius($radius) {
-  border-bottom-left-radius: $radius;
-     border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    border-top-left-radius: $radius;
 }
 
 //
 // padding / margin
 //
 @mixin padtop($top) {
-  padding-top: $top;
+    padding-top: $top;
 }
+
 @mixin padbot($bottom) {
-  padding-bottom: $bottom;
+    padding-bottom: $bottom;
 }
+
 @mixin margright($right) {
-  margin-right: $right;
+    margin-right: $right;
 }
+
 @mixin margbot($bottom) {
-  margin-bottom: $bottom;
+    margin-bottom: $bottom;
 }
+
 @mixin margtop($top) {
-  margin-top: $top;
+    margin-top: $top;
 }
 
 
@@ -47,19 +54,13 @@
 // responsive utilities
 //
 @mixin responsive-visibility($parent) {
-
-  @if $use-flexbox == true {
     #{$parent} {
-      display: block;
+        display: block;
     }
-  } @else {
-    #{$parent} {
-      display: flex;
-    }
-  }
 }
+
 @mixin responsive-invisibility($parent) {
-  #{$parent} {
-    display: none;
-  }
+    #{$parent} {
+        display: none;
+    }
 }

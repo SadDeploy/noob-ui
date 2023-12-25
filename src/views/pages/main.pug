@@ -1,144 +1,144 @@
 extends ../layouts/master.pug
 
 block header
-  include ../partials/_header.pug
+    include ../partials/_header.pug
 
 block content
-  main.page-main
-    .container
-      section
-        h1 H1: Grade by  Chest
-        p I held that gun in my hand, I felt a surge of power…like God must feel when he's holding a gun. How could you?! Haven't you learned anything from that guy who gives those sermons at church? Captain Whatshisname? We live in a society of laws! Why do you think I took you to all those Police Academy movies? For fun? Well, I didn't hear anybody laughing, did you? Except at that guy who made sound effects.
-        h2 H2: 1000+ Elements
-        p Haven't you learned anything from that guy who gives those sermons at church? Captain Whatshisname? We live in a society of laws! Why do you think I took you to all those Police Academy movies? For fun? Well, I didn't hear anybody laughing, did you? Except at that guy who made sound effects.
-        blockquote
-          i.sprite.sprite--facebook
-          i.sprite.sprite--twitter
-          i.sprite.sprite--percent_icon
-          p Books are useless! I only ever read one book, "To Kill A Mockingbird," and it gave me absolutely no insight on how to kill mockingbirds!
-        p Makes sound effects and laughs. Where was I? Oh yeah! Stay out of my booze. #[br] Weaseling out of things is important to learn. It's what separates us from the animals…except the weasel. Weaseling out of things is important to learn.
-        p Some #[b text] continue....
-        .row
-          .col.col__xs-6
-            h3 H3: Super Useful
-            p I hope this has taught you kids a lesson: kids never learn. Can't you people take the law into your own hands? I mean, we can't be policing the entire city:
-            ul.list--bullet
-              li You, minion. Lift my arm. AFTER HIM!
-              li Kif, I have mated with a woman. Inform the men.
-              li We're rescng ya.
-              li That's the ONLY thing about being a slave.
-              li You don't know how to do any of those.
-            p Yes, except the Dave Matthews Band doesn't rock. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! It's just like the story of the grasshopper and the octopus.
-          .col.col__xs-6
-            h4 H4: Light &amp; Dark Theme
-            p Guards! Bring me the forms I need to fill out to have her taken away! Leela, Bender, we're going grave robbing. Oh right. I forgot about the battle:
-            ol.list--number
-              li You, minion. Lift my arm. AFTER HIM!
-              li Kif, I have mated with a woman. Inform the men.
-              li We're rescng ya.
-              li That's the ONLY thing about being a slave.
-              li You don't know how to do any of those.
-            p All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV. But then the winter came, and the grasshopper died, and the octopus ate all his acorns.
-      section.text-template
-        h5 H5: Fully Customizable
-        p You, minion. Lift my arm. AFTER HIM! It's just like the story of the grasshopper and the octopus. All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV.
-        table.table
-          thead
-            tr
-              th.t5
-              th Product Name
-              th Rating
-              th Price
-          tbody
-            tr
-              td: +fieldCheckbox('', 'table1', false)
-              td Adidas EQT Cushion 91
-              td
-              td: b $145
-            tr
-              td: +fieldCheckbox('', 'table2', true)
-              td Brita Water Filter
-              td
-              td: b $29
-            tr
-              td: +fieldCheckbox('', 'table3', true)
-              td Gold Leaf Upcycled Bowl
-              td
-              td: b $129
-            tr
-              td: +fieldCheckbox('', 'table4', false)
-              td Kerr Optic Umbrella
-              td
-              td: b $59
-            tr
-              td: +fieldCheckbox('', 'table5', true)
-              td Linear Stem Backpack
-              td
-              td: b $185
-            tr
-              td: +fieldCheckbox('', 'table6', false)
-              td Odyssey Pack
-              td
-              td: b $215
-        p My precious torso! Alright, I'll get you some stupid food. Dear God, they'll be killed on our doorstep! And there's no trash pickup until January 3rd.
-        h6 H6: Free Updates
-        p Yes, except the Dave Matthews Band doesn't rock. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! It's just like the story of the grasshopper and the octopus. All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV.<br>But then the winter came, and the grasshopper died, and the octopus ate all his acorns. Bender, we're trying our best. Aww, it's true. I've been hiding it for so long.
-        .media
-          .media__img: img(src="assets/images/logo.png" alt="")
-          .media__body
-            h6 Jack Shaw
-            p Designer, photographer, traveler.
-            p.text__sm Website  •  Twitter
-        include ../components/_pager
-        .section-btn
-          .row
-            .col.col__sm-3
-              h5 Buttons
-              ul.list--unstyled
-                li: a.btn.btn--primary(href='#') Normal
-                li.margtop20: a.btn.btn--primary(href='#') Hover
-                li.margtop20: a.btn.btn--primary.active(href='#') Pressed
-            .col.col__sm-9
-              h5 Button Sizes & Variations
-              a.btn.btn--default.btn__xs(href='#') Tiny
-              a.btn.btn--default.btn__sm(href='#') Small
-              a.btn.btn--default(href='#') Standard
-              a.btn.btn--default.btn__lg(href='#') Large
-              .margtop50
-                a.btn.btn--default.btn--round.btn__xs(href='#') Tiny
-                a.btn.btn--default.btn--round.btn__sm(href='#') Small
-                a.btn.btn--default.btn--round(href='#') Standard
-                a.btn.btn--default.btn--round.btn__lg(href='#') Large
-        .section-forms
-          .row
-            .col.col__sm-3
-              h5 Ghost Buttons
-              ul.list--unstyled
-                li: a.btn.btn--outlined(href='#') Normal
-                li.margtop20: a.btn.btn--outlined(href='#') Hover
-                li.margtop20: a.btn.btn--outlined.active(href='#') Pressed
-            .col.col__sm-4
-              h5 Inputs
-              .form__group
-                +fieldInput('text', 'name', 'name', '', 'Grade  Kit', 'Grade  Kit', false)
-              h5 Dropdowns
-              .form__group
-                select.control
-                  option Dropdown
-                  option Dropdown Hover
-                  option Dropdown Selected
-                  option Dropdown Disabled
-              h5 Text Area
-              +fieldTextarea('text', 'text', '', 'Good news, everyone', 4, '', false)
-            .col.col__sm-4
-              h5 Checkboxes & Radio Buttons
-              .form__group
-                +fieldCheckbox('Checkbox', 'item1', false)
-                +fieldCheckbox('Checkbox Selected', 'item2', true)
-              .form__group
-                +fieldRadio('Radio Button', 'item11', 'radio', false)
-                +fieldRadio('Radio Button Selected', 'item12', 'radio', true)
-        include ../components/_paginator
+    main.page-main
+        .container
+            section
+                h1 H1: Grade by  Chest
+                p I held that gun in my hand, I felt a surge of power…like God must feel when he's holding a gun. How could you?! Haven't you learned anything from that guy who gives those sermons at church? Captain Whatshisname? We live in a society of laws! Why do you think I took you to all those Police Academy movies? For fun? Well, I didn't hear anybody laughing, did you? Except at that guy who made sound effects.
+                h2 H2: 1000+ Elements
+                p Haven't you learned anything from that guy who gives those sermons at church? Captain Whatshisname? We live in a society of laws! Why do you think I took you to all those Police Academy movies? For fun? Well, I didn't hear anybody laughing, did you? Except at that guy who made sound effects.
+                blockquote
+                    i.sprite.sprite--facebook
+                    i.sprite.sprite--twitter
+                    i.sprite.sprite--percent_icon
+                    p Books are useless! I only ever read one book, "To Kill A Mockingbird," and it gave me absolutely no insight on how to kill mockingbirds!
+                p Makes sound effects and laughs. Where was I? Oh yeah! Stay out of my booze. #[br] Weaseling out of things is important to learn. It's what separates us from the animals…except the weasel. Weaseling out of things is important to learn.
+                p Some #[b text] continue....
+                .row
+                    .col.col__xs-6
+                        h3 H3: Super Useful
+                        p I hope this has taught you kids a lesson: kids never learn. Can't you people take the law into your own hands? I mean, we can't be policing the entire city:
+                        ul.list--bullet
+                            li You, minion. Lift my arm. AFTER HIM!
+                            li Kif, I have mated with a woman. Inform the men.
+                            li We're rescng ya.
+                            li That's the ONLY thing about being a slave.
+                            li You don't know how to do any of those.
+                        p Yes, except the Dave Matthews Band doesn't rock. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! It's just like the story of the grasshopper and the octopus.
+                    .col.col__xs-6
+                        h4 H4: Light &amp; Dark Theme
+                        p Guards! Bring me the forms I need to fill out to have her taken away! Leela, Bender, we're going grave robbing. Oh right. I forgot about the battle:
+                        ol.list--number
+                            li You, minion. Lift my arm. AFTER HIM!
+                            li Kif, I have mated with a woman. Inform the men.
+                            li We're rescng ya.
+                            li That's the ONLY thing about being a slave.
+                            li You don't know how to do any of those.
+                        p All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV. But then the winter came, and the grasshopper died, and the octopus ate all his acorns.
+            section.text-template
+                h5 H5: Fully Customizable
+                p You, minion. Lift my arm. AFTER HIM! It's just like the story of the grasshopper and the octopus. All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV.
+                table.table
+                    thead
+                        tr
+                            th.t5
+                            th Product Name
+                            th Rating
+                            th Price
+                    tbody
+                        tr
+                            td: +fieldCheckbox('', 'table1', false)
+                            td Adidas EQT Cushion 91
+                            td
+                            td: b $145
+                        tr
+                            td: +fieldCheckbox('', 'table2', true)
+                            td Brita Water Filter
+                            td
+                            td: b $29
+                        tr
+                            td: +fieldCheckbox('', 'table3', true)
+                            td Gold Leaf Upcycled Bowl
+                            td
+                            td: b $129
+                        tr
+                            td: +fieldCheckbox('', 'table4', false)
+                            td Kerr Optic Umbrella
+                            td
+                            td: b $59
+                        tr
+                            td: +fieldCheckbox('', 'table5', true)
+                            td Linear Stem Backpack
+                            td
+                            td: b $185
+                        tr
+                            td: +fieldCheckbox('', 'table6', false)
+                            td Odyssey Pack
+                            td
+                            td: b $215
+                p My precious torso! Alright, I'll get you some stupid food. Dear God, they'll be killed on our doorstep! And there's no trash pickup until January 3rd.
+                h6 H6: Free Updates
+                p Yes, except the Dave Matthews Band doesn't rock. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! It's just like the story of the grasshopper and the octopus. All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV.<br>But then the winter came, and the grasshopper died, and the octopus ate all his acorns. Bender, we're trying our best. Aww, it's true. I've been hiding it for so long.
+                .media
+                    .media__img: img(src="assets/images/logo.png" alt="")
+                    .media__body
+                        h6 Jack Shaw
+                        p Designer, photographer, traveler.
+                        p.text__sm Website  •  Twitter
+                include ../components/_pager
+                .section-btn
+                    .row
+                        .col.col__sm-3
+                            h5 Buttons
+                            ul.list--unstyled
+                                li: a.btn.btn--primary(href='#') Normal
+                                li.margtop20: a.btn.btn--primary(href='#') Hover
+                                li.margtop20: a.btn.btn--primary.active(href='#') Pressed
+                        .col.col__sm-9
+                            h5 Button Sizes & Variations
+                            a.btn.btn--default.btn__xs(href='#') Tiny
+                            a.btn.btn--default.btn__sm(href='#') Small
+                            a.btn.btn--default(href='#') Standard
+                            a.btn.btn--default.btn__lg(href='#') Large
+                            .margtop50
+                                a.btn.btn--default.btn--round.btn__xs(href='#') Tiny
+                                a.btn.btn--default.btn--round.btn__sm(href='#') Small
+                                a.btn.btn--default.btn--round(href='#') Standard
+                                a.btn.btn--default.btn--round.btn__lg(href='#') Large
+                .section-forms
+                    .row
+                        .col.col__sm-3
+                            h5 Ghost Buttons
+                            ul.list--unstyled
+                                li: a.btn.btn--outlined(href='#') Normal
+                                li.margtop20: a.btn.btn--outlined(href='#') Hover
+                                li.margtop20: a.btn.btn--outlined.active(href='#') Pressed
+                        .col.col__sm-4
+                            h5 Inputs
+                            .form__group
+                                +fieldInput('text', 'name', 'name', '', 'Grade  Kit', 'Grade  Kit', false)
+                            h5 Dropdowns
+                            .form__group
+                                select.control
+                                    option Dropdown
+                                    option Dropdown Hover
+                                    option Dropdown Selected
+                                    option Dropdown Disabled
+                            h5 Text Area
+                            +fieldTextarea('text', 'text', '', 'Good news, everyone', 4, '', false)
+                        .col.col__sm-4
+                            h5 Checkboxes & Radio Buttons
+                            .form__group
+                                +fieldCheckbox('Checkbox', 'item1', false)
+                                +fieldCheckbox('Checkbox Selected', 'item2', true)
+                            .form__group
+                                +fieldRadio('Radio Button', 'item11', 'radio', false)
+                                +fieldRadio('Radio Button Selected', 'item12', 'radio', true)
+                include ../components/_paginator
 
 block footer
-  include ../partials/_footer.pug
+    include ../partials/_footer.pug

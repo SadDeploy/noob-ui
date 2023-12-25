@@ -3,702 +3,689 @@
 // --------------------------------------------------
 
 
-@mixin row-float() {
-  @include clearfix();
-  margin-left: ($grid-gutter-width-sm / -2);
-  margin-right: ($grid-gutter-width-sm / -2);
-
-  @if $use-adaptive == true {
-    @media screen and (min-width: $screen-md-min) {
-      margin-left: ($grid-gutter-width / -2);
-      margin-right: ($grid-gutter-width / -2);
-    }
-  }
-}
-
 @mixin row-flex() {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: ($grid-gutter-width-sm / -2);
-  margin-right: ($grid-gutter-width-sm / -2);
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc($grid-gutter-width-sm / -2);
+    margin-right: calc($grid-gutter-width-sm / -2);
 
-  @if $use-adaptive == true {
-    @media screen and (min-width: $screen-md-min) {
-      margin-left: ($grid-gutter-width / -2);
-      margin-right: ($grid-gutter-width / -2);
+    @if $use-adaptive == true {
+        @media screen and (min-width: $screen-md-min) {
+            margin-left: calc($grid-gutter-width / -2);
+            margin-right: calc($grid-gutter-width / -2);
+        }
     }
-  }
 }
 
 @mixin is-col__xs-1() {
-  width: 8.333333333333334%;
+    width: 8.333333333333334%;
 }
 
 @mixin is-col__xs-2() {
-  width: 16.666666666666668%;
+    width: 16.666666666666668%;
 }
 
 @mixin is-col__xs-3() {
-  width: 25%;
+    width: 25%;
 }
 
 @mixin is-col__xs-4() {
-  width: 33.333333333333336%;
+    width: 33.333333333333336%;
 }
 
 @mixin is-col__xs-5() {
-  width: 41.66666666666667%;
+    width: 41.66666666666667%;
 }
 
 @mixin is-col__xs-6() {
-  width: 50%;
+    width: 50%;
 }
 
 @mixin is-col__xs-7() {
-  width: 58.333333333333336%;
+    width: 58.333333333333336%;
 }
 
 @mixin is-col__xs-8() {
-  width: 66.66666666666667%;
+    width: 66.66666666666667%;
 }
 
 @mixin is-col__xs-9() {
-  width: 75%;
+    width: 75%;
 }
 
 @mixin is-col__xs-10() {
-  width: 83.33333333333334%;
+    width: 83.33333333333334%;
 }
 
 @mixin is-col__xs-11() {
-  width: 91.66666666666667%;
+    width: 91.66666666666667%;
 }
 
 @mixin is-col__xs-12() {
-  width: 100%;
+    width: 100%;
 }
 
 @mixin justify-content__xs($value) {
-  justify-content: $value;
+    justify-content: $value;
 }
 
 @mixin align-items__xs($value) {
-  align-items: $value;
+    align-items: $value;
 }
 
 @mixin align-content__xs($value) {
-  align-content: $value;
+    align-content: $value;
 }
 
 @mixin align-self__xs($value) {
-  align-self: $value;
+    align-self: $value;
 }
 
 @mixin order__xs($value) {
-  order: $value;
+    order: $value;
 }
 
 @mixin flex__xs($value) {
-  flex: $value;
+    flex: $value;
 }
 
 @mixin flex-grow__xs($value) {
-  flex-grow: $value;
+    flex-grow: $value;
 }
 
 @mixin flex-shrink__xs($value) {
-  flex-shrink: $value;
+    flex-shrink: $value;
 }
 
 @mixin flex-basis__xs($value) {
-  flex-basis: $value;
+    flex-basis: $value;
 }
 
 @mixin flex-direction__xs($value) {
-  flex-direction: $value;
+    flex-direction: $value;
 }
 
 @mixin flex-wrap__xs($value) {
-  flex-wrap: $value;
+    flex-wrap: $value;
 }
 
 @mixin flex-flow__xs($value) {
-  flex-flow: $value;
+    flex-flow: $value;
 }
 
 
 @mixin is-col__sm-1() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 8.333333333333334%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 8.333333333333334%;
+    }
 }
 
 @mixin is-col__sm-2() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 16.666666666666668%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 16.666666666666668%;
+    }
 }
 
 @mixin is-col__sm-3() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 25%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 25%;
+    }
 }
 
 @mixin is-col__sm-4() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 33.333333333333336%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 33.333333333333336%;
+    }
 }
 
 @mixin is-col__sm-5() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 41.66666666666667%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 41.66666666666667%;
+    }
 }
 
 @mixin is-col__sm-6() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 50%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 50%;
+    }
 }
 
 @mixin is-col__sm-7() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 58.333333333333336%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 58.333333333333336%;
+    }
 }
 
 @mixin is-col__sm-8() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 66.66666666666667%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 66.66666666666667%;
+    }
 }
 
 @mixin is-col__sm-9() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 75%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 75%;
+    }
 }
 
 @mixin is-col__sm-10() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 83.33333333333334%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 83.33333333333334%;
+    }
 }
 
 @mixin is-col__sm-11() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 91.66666666666667%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 91.66666666666667%;
+    }
 }
 
 @mixin is-col__sm-12() {
-  @media screen and (min-width: $screen-sm-min) {
-    width: 100%;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 100%;
+    }
 }
 
 @mixin justify-content__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    justify-content: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        justify-content: $value;
+    }
 }
 
 @mixin align-items__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    align-items: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        align-items: $value;
+    }
 }
 
 @mixin align-content__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    align-content: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        align-content: $value;
+    }
 }
 
 @mixin align-self__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    align-self: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        align-self: $value;
+    }
 }
 
 @mixin order__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    order: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        order: $value;
+    }
 }
 
 @mixin flex__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    flex: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        flex: $value;
+    }
 }
 
 @mixin flex-grow__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    flex-grow: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        flex-grow: $value;
+    }
 }
 
 @mixin flex-shrink__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    flex-shrink: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        flex-shrink: $value;
+    }
 }
 
 @mixin flex-basis__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    flex-basis: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        flex-basis: $value;
+    }
 }
 
 @mixin flex-direction__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    flex-direction: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        flex-direction: $value;
+    }
 }
 
 @mixin flex-wrap__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    flex-wrap: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        flex-wrap: $value;
+    }
 }
 
 @mixin flex-flow__sm($value) {
-  @media screen and (min-width: $screen-sm-min) {
-    flex-flow: $value;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        flex-flow: $value;
+    }
 }
 
 @mixin is-col__md-1() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 8.333333333333334%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 8.333333333333334%;
+    }
 }
 
 @mixin is-col__md-2() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 16.666666666666668%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 16.666666666666668%;
+    }
 }
 
 @mixin is-col__md-3() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 25%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 25%;
+    }
 }
 
 @mixin is-col__md-4() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 33.333333333333336%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 33.333333333333336%;
+    }
 }
 
 @mixin is-col__md-5() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 41.66666666666667%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 41.66666666666667%;
+    }
 }
 
 @mixin is-col__md-6() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 50%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 50%;
+    }
 }
 
 @mixin is-col__md-7() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 58.333333333333336%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 58.333333333333336%;
+    }
 }
 
 @mixin is-col__md-8() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 66.66666666666667%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 66.66666666666667%;
+    }
 }
 
 @mixin is-col__md-9() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 75%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 75%;
+    }
 }
 
 @mixin is-col__md-10() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 83.33333333333334%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 83.33333333333334%;
+    }
 }
 
 @mixin is-col__md-11() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 91.66666666666667%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 91.66666666666667%;
+    }
 }
 
 @mixin is-col__md-12() {
-  @media screen and (min-width: $screen-md-min) {
-    width: 100%;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        width: 100%;
+    }
 }
 
 @mixin justify-content__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    justify-content: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        justify-content: $value;
+    }
 }
 
 @mixin align-items__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    align-items: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        align-items: $value;
+    }
 }
 
 @mixin align-content__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    align-content: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        align-content: $value;
+    }
 }
 
 @mixin align-self__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    align-self: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        align-self: $value;
+    }
 }
 
 @mixin order__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    order: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        order: $value;
+    }
 }
 
 @mixin flex__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    flex: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        flex: $value;
+    }
 }
 
 @mixin flex-grow__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    flex-grow: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        flex-grow: $value;
+    }
 }
 
 @mixin flex-shrink__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    flex-shrink: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        flex-shrink: $value;
+    }
 }
 
 @mixin flex-basis__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    flex-basis: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        flex-basis: $value;
+    }
 }
 
 @mixin flex-direction__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    flex-direction: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        flex-direction: $value;
+    }
 }
 
 @mixin flex-wrap__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    flex-wrap: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        flex-wrap: $value;
+    }
 }
 
 @mixin flex-flow__md($value) {
-  @media screen and (min-width: $screen-md-min) {
-    flex-flow: $value;
-  }
+    @media screen and (min-width: $screen-md-min) {
+        flex-flow: $value;
+    }
 }
 
 @mixin is-col__lg-1() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 8.333333333333334%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 8.333333333333334%;
+    }
 }
 
 @mixin is-col__lg-2() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 16.666666666666668%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 16.666666666666668%;
+    }
 }
 
 @mixin is-col__lg-3() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 25%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 25%;
+    }
 }
 
 @mixin is-col__lg-4() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 33.333333333333336%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 33.333333333333336%;
+    }
 }
 
 @mixin is-col__lg-5() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 41.66666666666667%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 41.66666666666667%;
+    }
 }
 
 @mixin is-col__lg-6() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 50%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 50%;
+    }
 }
 
 @mixin is-col__lg-7() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 58.333333333333336%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 58.333333333333336%;
+    }
 }
 
 @mixin is-col__lg-8() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 66.66666666666667%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 66.66666666666667%;
+    }
 }
 
 @mixin is-col__lg-9() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 75%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 75%;
+    }
 }
 
 @mixin is-col__lg-10() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 83.33333333333334%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 83.33333333333334%;
+    }
 }
 
 @mixin is-col__lg-11() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 91.66666666666667%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 91.66666666666667%;
+    }
 }
 
 @mixin is-col__lg-12() {
-  @media screen and (min-width: $screen-lg-min) {
-    width: 100%;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 100%;
+    }
 }
 
 @mixin justify-content__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    justify-content: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        justify-content: $value;
+    }
 }
 
 @mixin align-items__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    align-items: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        align-items: $value;
+    }
 }
 
 @mixin align-content__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    align-content: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        align-content: $value;
+    }
 }
 
 @mixin align-self__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    align-self: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        align-self: $value;
+    }
 }
 
 @mixin order__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    order: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        order: $value;
+    }
 }
 
 @mixin flex__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    flex: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        flex: $value;
+    }
 }
 
 @mixin flex-grow__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    flex-grow: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        flex-grow: $value;
+    }
 }
 
 @mixin flex-shrink__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    flex-shrink: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        flex-shrink: $value;
+    }
 }
 
 @mixin flex-basis__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    flex-basis: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        flex-basis: $value;
+    }
 }
 
 @mixin flex-direction__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    flex-direction: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        flex-direction: $value;
+    }
 }
 
 @mixin flex-wrap__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    flex-wrap: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        flex-wrap: $value;
+    }
 }
 
 @mixin flex-flow__lg($value) {
-  @media screen and (min-width: $screen-lg-min) {
-    flex-flow: $value;
-  }
+    @media screen and (min-width: $screen-lg-min) {
+        flex-flow: $value;
+    }
 }
 
 @mixin is-col__xl-1() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 8.333333333333334%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 8.333333333333334%;
+    }
 }
 
 @mixin is-col__xl-2() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 16.666666666666668%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 16.666666666666668%;
+    }
 }
 
 @mixin is-col__xl-3() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 25%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 25%;
+    }
 }
 
 @mixin is-col__xl-4() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 33.333333333333336%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 33.333333333333336%;
+    }
 }
 
 @mixin is-col__xl-5() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 41.66666666666667%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 41.66666666666667%;
+    }
 }
 
 @mixin is-col__xl-6() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 50%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 50%;
+    }
 }
 
 @mixin is-col__xl-7() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 58.333333333333336%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 58.333333333333336%;
+    }
 }
 
 @mixin is-col__xl-8() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 66.66666666666667%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 66.66666666666667%;
+    }
 }
 
 @mixin is-col__xl-9() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 75%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 75%;
+    }
 }
 
 @mixin is-col__xl-10() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 83.33333333333334%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 83.33333333333334%;
+    }
 }
 
 @mixin is-col__xl-11() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 91.66666666666667%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 91.66666666666667%;
+    }
 }
 
 @mixin is-col__xl-12() {
-  @media screen and (min-width: $screen-xl-min) {
-    width: 100%;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        width: 100%;
+    }
 }
 
 @mixin justify-content__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    justify-content: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        justify-content: $value;
+    }
 }
 
 @mixin align-items__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    align-items: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        align-items: $value;
+    }
 }
 
 @mixin align-content__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    align-content: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        align-content: $value;
+    }
 }
 
 @mixin align-self__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    align-self: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        align-self: $value;
+    }
 }
 
 @mixin order__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    order: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        order: $value;
+    }
 }
 
 @mixin flex__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    flex: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        flex: $value;
+    }
 }
 
 @mixin flex-grow__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    flex-grow: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        flex-grow: $value;
+    }
 }
 
 @mixin flex-shrink__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    flex-shrink: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        flex-shrink: $value;
+    }
 }
 
 @mixin flex-basis__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    flex-basis: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        flex-basis: $value;
+    }
 }
 
 @mixin flex-direction__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    flex-direction: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        flex-direction: $value;
+    }
 }
 
 @mixin flex-wrap__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    flex-wrap: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        flex-wrap: $value;
+    }
 }
 
 @mixin flex-flow__xl($value) {
-  @media screen and (min-width: $screen-xl-min) {
-    flex-flow: $value;
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        flex-flow: $value;
+    }
 }

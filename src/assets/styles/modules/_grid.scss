@@ -4,52 +4,48 @@
 
 // Container widths
 .container {
-  @include container;
+	@include container;
 }
 
 // Row
 .row {
-  @include make-row;
+	@include make-row;
 
-  // only for flexbox
-  @if $use-flexbox == true {
-    &.reverse {
-      flex-direction: row-reverse;
-    }
-  }
+	&.reverse {
+		flex-direction: row-reverse;
+	}
 }
-@if $use-flexbox == true {
-  .col.reverse {
-    flex-direction: column-reverse;
-  }
+
+.col.reverse {
+	flex-direction: column-reverse;
 }
 
 // Columns
 .col {
-  @include make-column;
+	@include make-column;
 }
 
 // Extra small grid
 @include make-grid(xs);
 
 @if $use-adaptive == true {
-  // Small grid
-  @media screen and (min-width: $screen-sm-min) {
-    @include make-grid(sm);
-  }
+	// Small grid
+	@media screen and (min-width: $screen-sm-min) {
+		@include make-grid(sm);
+	}
 
-  // Medium grid
-  @media screen and (min-width: $screen-md-min) {
-    @include make-grid(md);
-  }
+	// Medium grid
+	@media screen and (min-width: $screen-md-min) {
+		@include make-grid(md);
+	}
 
-  // Large grid
-  @media screen and (min-width: $screen-lg-min) {
-    @include make-grid(lg);
-  }
+	// Large grid
+	@media screen and (min-width: $screen-lg-min) {
+		@include make-grid(lg);
+	}
 
-  // XLarge grid
-  @media screen and (min-width: $screen-xl-min) {
-    @include make-grid(xl);
-  }
+	// XLarge grid
+	@media screen and (min-width: $screen-xl-min) {
+		@include make-grid(xl);
+	}
 }

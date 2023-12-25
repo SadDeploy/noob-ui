@@ -3,28 +3,30 @@
 // --------------------------------------------------
 
 @if $use-breadcrumb == true {
-  .breadcrumbs {
-    padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
-    margin-bottom: $line-height-computed;
-    list-style: none;
-    background-color: $breadcrumb-bg;
+    .breadcrumbs {
+        padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
+        margin-bottom: $line-height-computed;
+        list-style: none;
+        background-color: $breadcrumb-bg;
 
-    &__item {
-      display: inline-block;
-      & + & {
-        &:before {
-          content: "#{$breadcrumb-separator}";
-          padding: 0 5px;
-          color: $breadcrumb-color;
+        &__item {
+            display: inline-block;
+
+            & + & {
+                &:before {
+                    content: "#{$breadcrumb-separator}";
+                    padding: 0 5px;
+                    color: $breadcrumb-color;
+                }
+            }
+
+            &.active {
+                color: $breadcrumb-active-color;
+            }
         }
-      }
 
-      &.active {
-        color: $breadcrumb-active-color;
-      }
+        &__link {
+            color: $breadcrumb-color;
+        }
     }
-    &__link {
-      color: $breadcrumb-color;
-    }
-  }
 }

@@ -2,17 +2,17 @@
 // Modules -> Split
 // --------------------------------------------------
 
-@if $use-split == true{
-  // You can create a block  by one of two methods: dl > dt + dd / ul > li
-  .split {
-    text-align:right;
-    list-style:none;
-    margin-left:0;
+@if $use-split == true {
+    // You can create a block  by one of two methods: dl > dt + dd / ul > li
+    .split {
+        text-align: right;
+        list-style: none;
+        margin-left: 0;
 
-    &__title {
-      text-align:left;
-      float:left;
-      clear:left;
+        &__title {
+            text-align: left;
+            float: left;
+            clear: left;
+        }
     }
-  }
 }

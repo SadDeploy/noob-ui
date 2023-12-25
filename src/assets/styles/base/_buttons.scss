@@ -3,149 +3,162 @@
 // --------------------------------------------------
 
 .btn {
-  display: inline-block;
-  font-weight: $btn-font-weight;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  text-decoration: none;
-  background-image: none;
-  border: 1px solid transparent;
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $base-font-size, $base-line-height, $btn-border-radius-base);
-
-  min-width: 160px;
-  text-transform: uppercase;
-
-
-  &:hover,
-  &:focus,
-  &.focus {
-    color: $btn-default-color;
+    display: inline-block;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
     text-decoration: none;
-  }
+    background-image: none;
+    border: 1px solid transparent;
+    @include button-size($padding-base-vertical, $padding-base-horizontal, $base-font-size, $base-line-height, $btn-border-radius-base);
 
-  &--full {
-    display: block;
-    width: 100%;
-    & + & {
-      margin-top: 5px;
-    }
-  }
-
-  &--natural {
-    vertical-align:baseline;
-    font-size:inherit;
-    line-height:inherit;
-    padding-right:0.5em;
-    padding-left: 0.5em;
-  }
-
-  // Button with icon
-  &__icon {
-    position: relative;
-  }
-  &__icon--left {
-    padding-left: $base-padding * 2;
-    .icon {
-      position: absolute;
-      top: 0;
-      left: $base-padding;
-    }
-  }
-  &__icon--right {
-    padding-left: $base-padding * 2;
-    .icon {
-      position: absolute;
-      top: 0;
-      right: $base-padding;
-    }
-  }
-  &--default {
-    @include button-variant-tr($btn-default-color, $btn-default-bg, $btn-default-border);
-  }
+    min-width: 160px;
+    text-transform: uppercase;
 
 
-  // Color buttons
-  @if $use-btn-color == true {
-    &--primary {
-      @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    &:hover,
+    &:focus,
+    &.focus {
+        color: $btn-default-color;
+        text-decoration: none;
     }
-    &--success {
-      @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
-    }
-    &--info {
-      @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
-    }
-    &--warning {
-      @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
-    }
-    &--danger {
-      @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
-    }
-    &--outlined {
-      @include button-variant-tr($btn-outlined-color, $btn-outlined-bg, $btn-outlined-border);
 
-    }
-  }
-
-  // Button Sizes
-  @if $use-btn-size == true {
-    &__lg {
-      @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-btn, $btn-border-radius-large);
-      height: 55px;
-    }
-    &__sm {
-      @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-btn, $btn-border-radius-small);
-      height: 40px;
-    }
-    &__xs {
-      @include button-size($padding-tiny-vertical, $padding-tiny-horizontal, $font-size-tiny, $line-height-btn, $btn-border-radius-small);
-      height: 35px;
-    }
-  }
-
-  &--round {
-    @include border-radius(50px);
-  }
-
-  // Button group
-  @if $use-btn-group == true {
-    &-group {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
-      > .btn {
-        position: relative;
-        float: left;
-        &:first-child {
-          margin-left: 0;
-          &:not(:last-child) {
-            @include border-right-radius(0);
-          }
-        }
-        &:last-child:not(:first-child) {
-          @include border-left-radius(0);
-        }
-        &:not(:first-child):not(:last-child) {
-          border-radius: 0;
-        }
-        + .btn {
-          margin-left: -1px;
-        }
-      }
-
-      &--justified {
-        display: table;
+    &--full {
+        display: block;
         width: 100%;
-        table-layout: fixed;
-        border-collapse: separate;
-        > .btn {
-          float: none;
-          display: table-cell;
-          width: 1%;
+
+        & + & {
+            margin-top: 5px;
         }
-      }
     }
-  }
+
+    &--natural {
+        vertical-align: baseline;
+        font-size: inherit;
+        line-height: inherit;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+    }
+
+    // Button with icon
+    &__icon {
+        position: relative;
+    }
+
+    &__icon--left {
+        padding-left: $base-padding * 2;
+
+        .icon {
+            position: absolute;
+            top: 0;
+            left: $base-padding;
+        }
+    }
+
+    &__icon--right {
+        padding-left: $base-padding * 2;
+
+        .icon {
+            position: absolute;
+            top: 0;
+            right: $base-padding;
+        }
+    }
+
+    &--default {
+        @include button-variant-tr($btn-default-color, $btn-default-bg, $btn-default-border);
+    }
+
+
+    // Color buttons
+    @if $use-btn-color == true {
+        &--primary {
+            @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+        }
+        &--success {
+            @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+        }
+        &--info {
+            @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+        }
+        &--warning {
+            @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+        }
+        &--danger {
+            @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+        }
+        &--outlined {
+            @include button-variant-tr($btn-outlined-color, $btn-outlined-bg, $btn-outlined-border);
+
+        }
+    }
+
+    // Button Sizes
+    @if $use-btn-size == true {
+        &__lg {
+            @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-btn, $btn-border-radius-large);
+            height: 55px;
+        }
+        &__sm {
+            @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-btn, $btn-border-radius-small);
+            height: 40px;
+        }
+        &__xs {
+            @include button-size($padding-tiny-vertical, $padding-tiny-horizontal, $font-size-tiny, $line-height-btn, $btn-border-radius-small);
+            height: 35px;
+        }
+    }
+
+    &--round {
+        @include border-radius(50px);
+    }
+
+    // Button group
+    @if $use-btn-group == true {
+        &-group {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+
+            > .btn {
+                position: relative;
+                float: left;
+
+                &:first-child {
+                    margin-left: 0;
+
+                    &:not(:last-child) {
+                        @include border-right-radius(0);
+                    }
+                }
+
+                &:last-child:not(:first-child) {
+                    @include border-left-radius(0);
+                }
+
+                &:not(:first-child):not(:last-child) {
+                    border-radius: 0;
+                }
+
+                + .btn {
+                    margin-left: -1px;
+                }
+            }
+
+            &--justified {
+                display: table;
+                width: 100%;
+                table-layout: fixed;
+                border-collapse: separate;
+
+                > .btn {
+                    float: none;
+                    display: table-cell;
+                    width: 1%;
+                }
+            }
+        }
+    }
 }

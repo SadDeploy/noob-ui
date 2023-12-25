@@ -4,49 +4,49 @@
 
 @if $use-adaptive == true {
 
-  @include responsive-invisibility('.visible__xs');
-  @include responsive-invisibility('.visible__sm');
-  @include responsive-invisibility('.visible__md');
-  @include responsive-invisibility('.visible__lg');
-  @include responsive-invisibility('.visible__xl');
+    @include responsive-invisibility('.visible__xs');
+    @include responsive-invisibility('.visible__sm');
+    @include responsive-invisibility('.visible__md');
+    @include responsive-invisibility('.visible__lg');
+    @include responsive-invisibility('.visible__xl');
 
-  @media screen and (max-width: $screen-xs-max) {
-    @include responsive-visibility('.visible__xs');
-  }
+    @media screen and (max-width: $screen-xs-max) {
+        @include responsive-visibility('.visible__xs');
+    }
 
-  @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    @include responsive-visibility('.visible__sm');
-  }
+    @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        @include responsive-visibility('.visible__sm');
+    }
 
-  @media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    @include responsive-visibility('.visible__md');
-  }
+    @media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        @include responsive-visibility('.visible__md');
+    }
 
-  @media screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max)  {
-    @include responsive-visibility('.visible__lg');
-  }
+    @media screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+        @include responsive-visibility('.visible__lg');
+    }
 
-  @media screen and (min-width: $screen-xl-min) {
-    @include responsive-visibility('.visible__xl');
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        @include responsive-visibility('.visible__xl');
+    }
 
-  @media screen and (max-width: $screen-xs-max) {
-    @include responsive-invisibility('.hidden__xs');
-  }
+    @media screen and (max-width: $screen-xs-max) {
+        @include responsive-invisibility('.hidden__xs');
+    }
 
-  @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    @include responsive-invisibility('.hidden__sm');
-  }
+    @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        @include responsive-invisibility('.hidden__sm');
+    }
 
-  @media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    @include responsive-invisibility('.hidden__md');
-  }
+    @media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        @include responsive-invisibility('.hidden__md');
+    }
 
-  @media screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max)  {
-    @include responsive-invisibility('.hidden__lg');
-  }
+    @media screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+        @include responsive-invisibility('.hidden__lg');
+    }
 
-  @media screen and (min-width: $screen-xl-min) {
-    @include responsive-invisibility('.hidden__xl');
-  }
+    @media screen and (min-width: $screen-xl-min) {
+        @include responsive-invisibility('.hidden__xl');
+    }
 }

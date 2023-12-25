@@ -3,158 +3,136 @@
 // ------------------------------------
 
 @mixin container() {
-  margin: 0 auto;
-  padding-left: ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
+    margin: 0 auto;
+    padding-left: calc($grid-gutter-width / 2);
+    padding-right: calc($grid-gutter-width / 2);
 
-  @if $use-adaptive == true {
-    @media screen and (min-width: $screen-sm-min) {
-      width: $container-sm;
+    @if $use-adaptive == true {
+        @media screen and (min-width: $screen-sm-min) {
+            width: $container-sm;
+        }
+        @media screen and (min-width: $screen-md-min) {
+            width: $container-md;
+            padding-left: calc($grid-gutter-width-md / 2);
+            padding-right: calc($grid-gutter-width-md / 2);
+        }
+        @media screen and (min-width: $screen-lg-min) {
+            width: $container-lg;
+        }
+        @media screen and (min-width: $screen-xl-min) {
+            width: $container-xl;
+        }
+    } @else {
+        width: $container-xl;
     }
-    @media screen and (min-width: $screen-md-min) {
-      width: $container-md;
-      padding-left: ($grid-gutter-width-md / 2);
-      padding-right: ($grid-gutter-width-md / 2);
-    }
-    @media screen and (min-width: $screen-lg-min) {
-      width: $container-lg;
-    }
-    @media screen and (min-width: $screen-xl-min) {
-      width: $container-xl;
-    }
-  } @else {
-    width: $container-xl;
-  }
-
-  // float grid
-  @if $use-flexbox != true {
-    @include clearfix;
-  }
 }
 
 @mixin make-row($gutter: $grid-gutter-width) {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: ($grid-gutter-width / -2);
-  margin-right: ($grid-gutter-width / -2);
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc($grid-gutter-width / -2);
+    margin-right: calc($grid-gutter-width / -2);
 
-  @if $use-adaptive == true {
-    @media screen and (min-width: $screen-md-min) {
-      margin-left: ($grid-gutter-width-md / -2);
-      margin-right: ($grid-gutter-width-md / -2);
+    @if $use-adaptive == true {
+        @media screen and (min-width: $screen-md-min) {
+            margin-left: calc($grid-gutter-width-md / -2);
+            margin-right: calc($grid-gutter-width-md / -2);
+        }
     }
-  }
-
-  // float grid
-  @if $use-flexbox != true {
-    @include clearfix;
-  }
 }
 
 @mixin make-column($gutter: $grid-gutter-width) {
-  padding-left: ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
+    padding-left: calc($grid-gutter-width / 2);
+    padding-right: calc($grid-gutter-width / 2);
 
-  @if $use-adaptive == true {
-    @media screen and (min-width: $screen-md-min) {
-      padding-left: ($grid-gutter-width-md / 2);
-      padding-right: ($grid-gutter-width-md / 2);
+    @if $use-adaptive == true {
+        @media screen and (min-width: $screen-md-min) {
+            padding-left: calc($grid-gutter-width-md / 2);
+            padding-right: calc($grid-gutter-width-md / 2);
+        }
     }
-  }
-
-  // float grid
-  @if $use-flexbox != true {
-    float: left;
-    min-height: 1px;
-  }
 }
 
 @mixin float-grid-columns($class, $i: 1, $list: ".col__#{$class}-#{$i}") {
-  @for $i from (1 + 1) through $grid-columns {
-    $list: "#{$list}, .col__#{$class}-#{$i}";
-  }
+    @for $i from (1 + 1) through $grid-columns {
+        $list: "#{$list}, .col__#{$class}-#{$i}";
+    }
 }
 
 @mixin calc-grid-column($index, $class, $type) {
-  @if ($type == width) and ($index > 0) {
-    .col__#{$class}-#{$index} {
-      width: percentage(($index / $grid-columns));
+    @if ($type == width) and ($index > 0) {
+        .col__#{$class}-#{$index} {
+            width: percentage(calc($index / $grid-columns));
+        }
     }
-  }
 }
 
 @mixin calc-prop-column($index, $class, $type) {
-  @if ($type == start) {
-    .start__#{$class} {
-      justify-content: flex-start;
+    @if ($type == start) {
+        .start__#{$class} {
+            justify-content: flex-start;
+        }
     }
-  }
-  @if ($type == end) {
-    .end__#{$class} {
-      justify-content: flex-end;
+    @if ($type == end) {
+        .end__#{$class} {
+            justify-content: flex-end;
+        }
     }
-  }
-  @if ($type == center) {
-    .center__#{$class} {
-      justify-content: center;
+    @if ($type == center) {
+        .center__#{$class} {
+            justify-content: center;
+        }
     }
-  }
-  @if ($type == top) {
-    .top__#{$class} {
-      align-items: flex-start;
+    @if ($type == top) {
+        .top__#{$class} {
+            align-items: flex-start;
+        }
     }
-  }
-  @if ($type == middle) {
-    .middle__#{$class} {
-      align-items: center;
+    @if ($type == middle) {
+        .middle__#{$class} {
+            align-items: center;
+        }
     }
-  }
-  @if ($type == bottom) {
-    .bottom__#{$class} {
-      align-items: flex-end;
+    @if ($type == bottom) {
+        .bottom__#{$class} {
+            align-items: flex-end;
+        }
     }
-  }
-  @if ($type == around) {
-    .around__#{$class} {
-      justify-content: space-around;
+    @if ($type == around) {
+        .around__#{$class} {
+            justify-content: space-around;
+        }
     }
-  }
-  @if ($type == between) {
-    .between__#{$class} {
-      justify-content: space-between;
+    @if ($type == between) {
+        .between__#{$class} {
+            justify-content: space-between;
+        }
     }
-  }
-  @if ($type == first) {
-    .first__#{$class} {
-      order: -1;
+    @if ($type == first) {
+        .first__#{$class} {
+            order: -1;
+        }
     }
-  }
-  @if ($type == last) {
-    .last__#{$class} {
-      order: 1;
+    @if ($type == last) {
+        .last__#{$class} {
+            order: 1;
+        }
     }
-  }
 }
 
 @mixin loop-grid-columns($columns, $class, $type) {
-  @for $i from 0 through $columns {
-    @include calc-grid-column($i, $class, $type);
-  }
-
-  // only for flexbox
-  @if $use-flexbox == true {
-    @for $i from 0 through 0 {
-      @include calc-prop-column($i, $class, $type);
+    @for $i from 0 through $columns {
+        @include calc-grid-column($i, $class, $type);
     }
-  }
+    @for $i from 0 through 0 {
+        @include calc-prop-column($i, $class, $type);
+    }
 }
 
 @mixin make-grid($class) {
-  @include float-grid-columns($class);
-  @include loop-grid-columns($grid-columns, $class, width);
+    @include float-grid-columns($class);
+    @include loop-grid-columns($grid-columns, $class, width);
 
-  // only for flexbox
-  @if $use-flexbox == true {
     @include loop-grid-columns($grid-columns, $class, start);
     @include loop-grid-columns($grid-columns, $class, center);
     @include loop-grid-columns($grid-columns, $class, end);
@@ -165,5 +143,4 @@
     @include loop-grid-columns($grid-columns, $class, between);
     @include loop-grid-columns($grid-columns, $class, first);
     @include loop-grid-columns($grid-columns, $class, last);
-  }
 }

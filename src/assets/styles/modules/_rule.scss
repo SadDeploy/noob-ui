@@ -2,38 +2,41 @@
 // Modules -> Rule
 // --------------------------------------------------
 
-@if $use-rules == true{
-  // decoration <hr/>
-  .rule {
-    color: $base-color;
-    border:none;
-    border-bottom-width:1px;
-    border-bottom-style:solid;
-    margin-bottom: (($line-height-computed - 1px) / $base-font-size) * 1em;
+@if $use-rules == true {
+    // decoration <hr/>
+    .rule {
+        color: $base-color;
+        border: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        margin-bottom: (($line-height-computed - 1px) / $base-font-size) * 1em;
 
-    &--dotted {
-      border-bottom-style:dotted;
-    }
-    &--dashed {
-      border-bottom-style:dashed;
-    }
+        &--dotted {
+            border-bottom-style: dotted;
+        }
 
-    // ornament rule
-    &--ornament {
-      position:relative;
-      &:after {
-        content:"\00A7";
-        position:absolute;
-        top:   0;
-        right: 0;
-        left:  0;
-        line-height:0;
-        text-align:center;
-      }
-      // custom ornament <hr class="rule rule--ornament" data-ornament="!">
-      &[data-ornament]:after {
-        content:attr(data-ornament);
-      }
+        &--dashed {
+            border-bottom-style: dashed;
+        }
+
+        // ornament rule
+        &--ornament {
+            position: relative;
+
+            &:after {
+                content: "\00A7";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                line-height: 0;
+                text-align: center;
+            }
+
+            // custom ornament <hr class="rule rule--ornament" data-ornament="!">
+            &[data-ornament]:after {
+                content: attr(data-ornament);
+            }
+        }
     }
-  }
 }

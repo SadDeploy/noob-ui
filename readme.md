@@ -9,8 +9,7 @@ Prerequisites:
 
 Modules version:
 ```
-node v10+
-npm v6+
+node v14
 ```
 
 Installation process:
@@ -27,7 +26,7 @@ Use folder src/sprites/ to build svg-sprites
 
 JSON:
 ```
-Add to the webpack config JSON files from the folder src/views/data/ to use json in your project. 
+Add to the webpack config JSON files from the folder src/views/data/ to use json in your project.
 ```
 
 For project development with livereload run:

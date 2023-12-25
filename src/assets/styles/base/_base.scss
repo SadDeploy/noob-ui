@@ -6,111 +6,130 @@
 // Make all elements box-sizing
 //
 * {
-  &,
-  &:before,
-  &:after {
-    box-sizing: border-box;
-  }
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
 section, article, aside, footer, header, nav, hgroup, main {
-  display:block;
+    display: block;
 }
 
 //
 // Delete focus border
 //
-a:active, a:focus {outline: none;}
-input, textarea {outline:none;}
-input:active, textarea:active {outline:none;}
-button:active, button:focus {outline: none;}
-:focus {outline:none;}
-button::-moz-focus-inner {border: 0;}
+a:active, a:focus {
+    outline: none;
+}
+
+input, textarea {
+    outline: none;
+}
+
+input:active, textarea:active {
+    outline: none;
+}
+
+button:active, button:focus {
+    outline: none;
+}
+
+:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
 
 //
 // Clearfix
 //
 .clearfix {
-  @include clearfix();
+    @include clearfix();
 }
 
 //
 // HTML
 //
 html {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 //
 // Basic typography styles
 //
 body {
-  background-color: $base-background;
-  color: $base-color;
-  font-weight: $base-font-weight;
-  font-size: $base-font-size;
-  font-family: $base-font-family;
-  line-height: $base-line-height;
+    background-color: $base-background;
+    color: $base-color;
+    font-weight: $base-font-weight;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: $base-line-height;
 }
 
 section {
-  background: $white-lighten;
+    background: $white-lighten;
 }
 
 //
 // Link
 //
 a {
-  color: $link-color;
-  @include transition;
+    color: $link-color;
+    @include transition;
 
-  &:hover,
-  &:active,
-  &:focus {
-    color: $link-hover-color;
-  }
+    &:hover,
+    &:active,
+    &:focus {
+        color: $link-hover-color;
+    }
 }
 
 //
 // Images
 //
 img {
-  max-width: 100%;
-  height: auto;
-}
-.img--right{
-  float:right;
-  margin-bottom:  $line-height-computed;
-  margin-left: $line-height-computed;
-}
-.img--left{
-  float:left;
-  margin-right: $line-height-computed;
-  margin-bottom: $line-height-computed;
-}
-.img--center{
-  display:block;
-  margin-right:auto;
-  margin-bottom: $line-height-computed;
-  margin-left:auto;
+    max-width: 100%;
+    height: auto;
 }
 
+.img--right {
+    float: right;
+    margin-bottom: $line-height-computed;
+    margin-left: $line-height-computed;
+}
+
+.img--left {
+    float: left;
+    margin-right: $line-height-computed;
+    margin-bottom: $line-height-computed;
+}
+
+.img--center {
+    display: block;
+    margin-right: auto;
+    margin-bottom: $line-height-computed;
+    margin-left: auto;
+}
 
 
 //
 // Display none
 //
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0,0,0,0);
-  overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
 }
