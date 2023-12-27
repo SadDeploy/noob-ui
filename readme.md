@@ -9,7 +9,7 @@ Prerequisites:
 
 Modules version:
 ```
-node v14
+node v18
 ```
 
 Installation process:
